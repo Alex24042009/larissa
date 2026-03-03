@@ -32,7 +32,7 @@ html, body {
 
 /* ================= container ================= */
 #container {
-    background-image: url('../images/background.mobile.jpg');
+    background-image: url('img/background.mobile.jpg');
     background-size: cover;
     min-height: 100vh;
     background-position: center;
@@ -411,7 +411,7 @@ font-size: 24px;
 /* ======== about us ======= */
 
 .about {
-     background-image: url('../images/background.mobile.jpg');
+     background-image: url('img/background.mobile.jpg');
     padding: 90px 8%;
 }
 
@@ -468,5 +468,6 @@ font-size: 24px;
 .about-stats {
     justify-content: center;
 }
+
 
 }
