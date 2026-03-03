@@ -455,23 +455,16 @@ font-size: 24px;
 
 
 @media (max-width: 768px) {
+    #home {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .home-content {
+        max-width: 50%;
+    }
 
     .home-image {
-        width: 100%;
-        max-width: 350px;
+        max-width: 50%;
     }
-
-    .card {
-        width: 100%;
-    }
-
-    .produto2 {
-        padding: 40px 20px;
-    }
-
-    .about-image img {
-        width: 100%;
-        max-width: 420px;
-    }
-
 }
