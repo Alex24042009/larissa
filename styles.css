@@ -1,0 +1,472 @@
+/* ================= RESET ================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+/* ================= coresss ================= */
+:root {
+    --color-neutral-0: #ffffff;
+    --color-neutral-1: #eee4db;
+    --color-neutral-2: #d4c3b6;
+    --color-neutral-3: #b8a99e;
+    --color-neutral-4: #9e8f85;
+    --color-neutral-5: #7e6e65;
+    --color-neutral-6: #5e4e45;
+    --color-neutral-7: #3e2e25;
+    --color-neutral-8: #1e0e05;
+    --color-neutral-9: #000000;
+
+    --color-primary-1: #F1717C;
+    --color-primary-2: #cf95b2;
+    --color-primary-3: #F4F1EC;
+}
+
+/* ================= container ================= */
+#container {
+    background-image: url('../images/background.mobile.jpg');
+    background-size: cover;
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+/* ================= botoes ================= */
+a.btn {
+    text-decoration: none;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: transparent;
+    transition: 0.3s ease;
+}
+
+.btn-default {
+    background-color: var(--color-primary-1);
+    color: var(--color-neutral-0);
+}
+
+.btn-default:hover {
+    background-color: var(--color-primary-2);
+}
+
+.btn-outlined {
+    border: 2px solid var(--color-primary-1);
+    color: var(--color-primary-1);
+}
+
+.btn-outlined:hover {
+    background-color: var(--color-primary-1);
+    color: var(--color-neutral-0);
+}
+
+.btn-mobile {
+    font-size: 1.5rem;
+    background: none;
+}
+
+/* ================= header ================= */
+header {
+    background-color: var(--color-neutral-1);
+    padding: 12px 4%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+   
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    flex-direction: row;
+}
+
+.logo {
+    width: 200px;
+
+}
+
+/* ================= menu moba ================= */
+#nav-links {
+    display: none;
+    list-style: none;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    position: absolute;
+    top: 165px;
+    left: 0;
+    background-color: var(--color-neutral-1);
+    padding: 1rem;
+}
+
+#nav-links.show {
+    display: flex;
+}
+
+#nav-links li {
+    text-align: center;
+}
+
+#nav-links a {
+    text-decoration: none;
+    color: var(--color-neutral-8);
+    font-weight: 500;
+   
+    transition: 0.3s ease;
+}
+
+#nav-links a:hover {
+    color: var(--color-primary-1);
+}
+
+#nav-links a {
+    text-decoration: none;
+    color: var(--color-neutral-8);
+    font-weight: 500;
+    position: relative;
+}
+
+#nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-primary-1);
+    transition: width 0.3s ease;
+}
+
+#nav-links a:hover::after {
+    width: 100%;
+}
+
+/* p esconder o Contatar no moba */
+header .btn-default {
+    display: none;
+}
+
+/* ================= home ================= */
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 96px);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;  
+}
+
+.home-image {
+    width: clamp(500px, 50%, 500px);
+    transition: transform 0.3s ease;
+}
+
+.home-title {
+    color: var(--color-neutral-8);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    text-transform: uppercase;
+    line-height: 1.2;
+    max-width: 700px;
+}
+
+.home-title span {
+    color: var(--color-primary-1);
+}
+
+.home-description {
+    max-width: 500px;
+    font-size: 1rem;
+    color: var(--color-neutral-7);
+}
+
+.home-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.whatsapp {
+position: fixed;
+bottom: 20px;
+right: 20px;
+background: #25D366;
+color: white;
+padding: 15px;
+border-radius: 50%;
+font-size: 24px;
+}
+
+/* ================= desktop responsivo ================= */
+@media (min-width: 769px) {
+
+    .btn-mobile {
+        display: none;
+    }
+
+    #nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        padding: 8px 12px;
+        gap: 3rem;
+        margin: 0;
+    }
+
+    header .btn-default {
+        display: block;
+    }
+
+    .btn-default:hover {
+    background-color: var(--color-primary-2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+    #home {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+        padding: 40px 8%;
+    }
+
+    .home-content {
+        max-width: 50%;
+    }
+}
+
+/* ================= produtinhos ================= */
+
+.produtos {
+     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 40px;
+}
+
+.card {
+    background-color: #ffffff;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3 {
+    margin: 10px 0 5px 0;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.preco {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--color-primary-1);
+    font-size: 18px;
+}
+
+/* ================= produtinhos 2 ================= */
+
+.produto2 {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 100px;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.card2 {
+    background-color: #f8e8e8;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card2:hover {
+    transform: scale(1.05);
+}
+
+.card2 img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card2 h3 {
+    margin: 10px 0 5px 0;
+}
+
+.card2 p {
+    font-size: 14px;
+    color: #555;
+}
+
+.preco {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--color-primary-1);
+    font-size: 18px;
+}
+
+.footer {
+    background: #2b2b2b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* ========= beneficiosss ======== */
+
+.benefits {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.benefits-title {
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.benefits-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.benefit {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.benefit:hover {
+    transform: translateY(-8px);
+}
+
+.benefit i {
+    font-size: 35px;
+    color: #d2698a;
+    margin-bottom: 15px;
+}
+
+.benefit h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.benefit p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* ======== about us ======= */
+
+.about {
+     background-image: url('../images/background.mobile.jpg');
+    padding: 90px 8%;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.about-image img {
+    width: 420px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    max-width: 520px;
+}
+
+.about-text h2 {
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.footer2 {
+    background: #2b2b2b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    position: relative;
+}
+
+
+@media (max-width: 768px) {
+
+.about-container {
+    flex-direction: column;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+}
+
+.about-stats {
+    justify-content: center;
+}
+
+}
