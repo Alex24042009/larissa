@@ -168,7 +168,7 @@ header .btn-default {
 /* ================= home ================= */
 #home {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
     align-items: center;
     justify-content: center;
@@ -468,3 +468,4 @@ font-size: 24px;
         max-width: 50%;
     }
 }
+
